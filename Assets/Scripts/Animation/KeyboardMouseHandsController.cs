@@ -26,8 +26,16 @@ public class KeyboardMouseHandsController : MonoBehaviour
 
 	public float handRaiseHeight = 0.2f;
 	public Vector2 pressTimeRange = new Vector2(0.25f, 0.5f);
+	public float heightAboveMouse = 0.1f;
 
 	private bool mouseMode = false;
+	private bool movingMouse = false;
+
+	public Vector2 moveMouseTimeRange = new Vector2(0.5f, 1.0f);
+
+	// lower the more productive
+	public float sluggishness = 1.0f;
+	public AudioSet typeAudioSet;
 
 	// Start is called before the first frame update
 	void Start()
@@ -41,6 +49,27 @@ public class KeyboardMouseHandsController : MonoBehaviour
 		ikTracker.rightHandPositionWeight = 1.0f;
 		ikTracker.leftHandTracker = ikHandL;
 		ikTracker.rightHandTracker = ikHandR;
+
+		Bounds bounds = leftHandZone.bounds;
+
+		ikHandL.position = new Vector3(
+			Random.Range(bounds.min.x, bounds.max.x),
+			Random.Range(bounds.min.y, bounds.max.y),
+			Random.Range(bounds.min.z, bounds.max.z)
+			);
+
+		bounds = rightHandZone.bounds;
+		ikHandR.position = new Vector3(
+			Random.Range(bounds.min.x, bounds.max.x),
+			Random.Range(bounds.min.y, bounds.max.y),
+			Random.Range(bounds.min.z, bounds.max.z)
+			);
+
+		startTimeL = startTimeR = Time.time;
+		endTimeL = endTimeR = Time.time + 0.5f;
+		startPosL = endPosL = ikHandL.position;
+		startPosR = endPosR = ikHandR.position;
+		mouseMode = movingMouse = false;
 	}
 
 	private void OnDisable()
@@ -58,8 +87,16 @@ public class KeyboardMouseHandsController : MonoBehaviour
 
 		if (time > endTimeL)
 		{
+
 			// make a new left hand position
 			startPosL = ikHandL.position;
+
+			// play audio
+			if (!mouseMode)
+			{
+				typeAudioSet.PlayRandom(ikHandL.position);
+			}
+
 			Bounds bounds = leftHandZone.bounds;
 
 			endPosL = new Vector3(
@@ -69,18 +106,67 @@ public class KeyboardMouseHandsController : MonoBehaviour
 				);
 
 			startTimeL = time;
-			endTimeL = time + Random.Range(pressTimeRange.x, pressTimeRange.y);
+			endTimeL = time + Random.Range(pressTimeRange.x, pressTimeRange.y) * sluggishness;
 		}
 
 		// move left hand
 		float lerpTime = Mathf.InverseLerp(startTimeL, endTimeL, time);
-		ikHandL.position = Vector3.Lerp(startPosL, endPosL, lerpTime) + Vector3.up * Mathf.Sin(lerpTime * Mathf.PI) * handRaiseHeight;
+		ikHandL.position = Vector3.Lerp(startPosL, endPosL, lerpTime)
+			+ (mouseMode ? Vector3.zero : (Vector3.up * Mathf.Sin(lerpTime * Mathf.PI) * handRaiseHeight));
 
 		// right hand
 		if (time > endTimeR)
 		{
+			// play audio
+			if (!mouseMode)
+			{
+				typeAudioSet.PlayRandom(ikHandR.position);
+			}
+
+			if (mouseMode && !movingMouse
+				|| mouseMode && Random.value > 0.2f
+				|| !mouseMode && Random.value > 0.8f
+				)
+			{
+				mouseMode = true;
+
+				Vector3 mousePos = mouse.position;
+				Vector3 handPos = ikHandR.position;
+				mousePos.y = handPos.y;
+
+				float dist = Vector3.Distance(mousePos, handPos);
+
+				startPosR = ikHandR.position;
+
+				// too far, then destination is mouse
+				if (dist > 0.001f)
+				{
+					endPosR = mouse.position;
+					endPosR.y = Random.Range(mouseZone.bounds.min.y, mouseZone.bounds.max.y);
+					movingMouse = false;
+				}
+				else
+				{
+					Bounds bounds = mouseZone.bounds;
+
+					endPosR = new Vector3(
+						Random.Range(bounds.min.x, bounds.max.x),
+						Random.Range(bounds.min.y, bounds.max.y),
+						Random.Range(bounds.min.z, bounds.max.z)
+						);
+					movingMouse = true;
+				}
+				endTimeR = time + Random.Range(moveMouseTimeRange.x, moveMouseTimeRange.y) * sluggishness;
+
+				// freeze the left hand while we move the mouse
+				startTimeL = time;
+				endTimeL = endTimeR;
+				startPosL = endPosL = ikHandL.position;
+				endPosL.y = Random.Range(leftHandZone.bounds.min.y, leftHandZone.bounds.max.y);
+
+			}
 			// keyboard
-			if (Random.value < 0.66f)
+			else
 			{
 				// make a new left hand position
 				startPosR = ikHandR.position;
@@ -92,24 +178,27 @@ public class KeyboardMouseHandsController : MonoBehaviour
 					Random.Range(bounds.min.z, bounds.max.z)
 					);
 
-				startTimeR = time;
-				endTimeR = time + Random.Range(pressTimeRange.x, pressTimeRange.y);
 				mouseMode = false;
+				movingMouse = false;
+				endTimeR = time + Random.Range(pressTimeRange.x, pressTimeRange.y) * sluggishness;
 			}
-			else
-			{
-				mouseMode = true;
 
+			startTimeR = time;
 
-			}
 		}
 
 		// move right hand
 		lerpTime = Mathf.InverseLerp(startTimeR, endTimeR, time);
-		ikHandR.position = Vector3.Lerp(startPosR, endPosR, lerpTime) + Vector3.up * Mathf.Sin(lerpTime * Mathf.PI) * handRaiseHeight;
+		ikHandR.position =
+			Vector3.Lerp(startPosR, endPosR, lerpTime)
+			+ (mouseMode ? Vector3.zero : Vector3.up * Mathf.Sin(lerpTime * Mathf.PI) * handRaiseHeight);
 
+		if (mouseMode && movingMouse)
+		{
+			Vector3 mousePos = ikHandR.position;
+			mousePos.y = mouse.position.y;
 
-
-
+			mouse.position = mousePos;
+		}
 	}
 }
