@@ -24,6 +24,12 @@ ModelImporter:
       average position error 4.0 mm and maximum position error 4.0 mm at time 0:
       0 (0.0%) Frame 0\n\tRightLowerArm average position error 4.0 mm and maximum
       position error 4.0 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting quality report
+      for clip 'Armature|brow.mad':\n\tRetargeting quality is good. No significant
+      differences with original animation were found.\n\nRetargeting quality report
+      for clip 'Armature|brow.neutral':\n\tRetargeting quality is good. No significant
+      differences with original animation were found.\n\nRetargeting quality report
+      for clip 'Armature|brow.sad':\n\tRetargeting quality is good. No significant
+      differences with original animation were found.\n\nRetargeting quality report
       for clip 'Armature|Head.D':\n\tLeftLowerArm average position error 4.0 mm and
       maximum position error 4.0 mm at time 0: 1 (11.1%) Frame 1\n\tRightLowerArm
       average position error 4.0 mm and maximum position error 4.0 mm at time 0:
@@ -52,6 +58,10 @@ ModelImporter:
       average position error 4.0 mm and maximum position error 4.0 mm at time 0:
       2 (22.2%) Frame 2\n\tRightLowerArm average position error 3.9 mm and maximum
       position error 4.0 mm at time 0: 0 (0.0%) Frame 0\n\nRetargeting quality report
+      for clip 'Armature|idle sit':\n\tRetargeting quality is good. No significant
+      differences with original animation were found.\n\nRetargeting quality report
+      for clip 'Armature|idle sit.computer':\n\tRetargeting quality is good. No significant
+      differences with original animation were found.\n\nRetargeting quality report
       for clip 'Armature|Idle Stand':\n\tRetargeting quality is good. No significant
       differences with original animation were found.\n\nRetargeting quality report
       for clip 'Armature|MouthClosed':\n\tRetargeting quality is good. No significant
@@ -142,7 +152,7 @@ ModelImporter:
       - path: Armature/hips/spine/torso/chest/neck/head/face/jaw.upper/jaw.upper_end
         weight: 0
       - path: Armature/hips/spine/torso/chest/neck/head/jaw
-        weight: 0
+        weight: 1
       - path: Armature/hips/spine/torso/chest/neck/head/jaw/jaw_end
         weight: 0
       - path: Armature/hips/spine/torso/chest/shoulder.L
@@ -240,6 +250,10 @@ ModelImporter:
       - path: body
         weight: 0
       - path: bowtie
+        weight: 0
+      - path: glasses
+        weight: 0
+      - path: hair
         weight: 0
       - path: tie
         weight: 0
@@ -462,7 +476,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
@@ -491,7 +505,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
@@ -556,6 +570,151 @@ ModelImporter:
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|brow.mad
+      takeName: Armature|brow.mad
+      internalID: -3370981960935060338
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|brow.neutral
+      takeName: Armature|brow.neutral
+      internalID: 3635743813404461165
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|brow.sad
+      takeName: Armature|brow.sad
+      internalID: -2810370227028826937
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|idle sit
+      takeName: Armature|idle sit
+      internalID: 2435158605401022806
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|idle sit.computer
+      takeName: Armature|idle sit.computer
+      internalID: 5403608920629875027
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
