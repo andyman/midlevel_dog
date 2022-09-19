@@ -123,7 +123,6 @@ public class ClockBlinker : MonoBehaviour
 	{
 		if (other.gameObject.layer == 8)
 		{
-			Debug.Log("SnoozePressed");
 			SnoozePressed();
 		}
 	}

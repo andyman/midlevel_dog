@@ -6,8 +6,8 @@ public class SinusoidalBlendshape : MonoBehaviour
 {
 	public SkinnedMeshRenderer skinnedMeshRenderer;
 
-	public int blendShapeIndex = 0;
-	public Vector2 range = new Vector2(0.0f, 100.0f);
+	public int[] blendShapeIndex = new int[] { 0 };
+	public Vector2[] range;
 	public float period = 3.0f;
 
 	public float timeMultiplier = 1.0f;
@@ -29,7 +29,13 @@ public class SinusoidalBlendshape : MonoBehaviour
 		time += Time.deltaTime * timeMultiplier;
 
 		float value = Mathf.Sin(time * TWO_PI / period) * 0.5f + 0.5f;
-		value = Mathf.Lerp(range.x, range.y, value);
-		skinnedMeshRenderer.SetBlendShapeWeight(blendShapeIndex, value);
+
+		for (int i = 0; i < blendShapeIndex.Length; i++)
+		{
+			float blend = Mathf.Lerp(range[i].x, range[i].y, value);
+
+			skinnedMeshRenderer.SetBlendShapeWeight(blendShapeIndex[i], blend);
+		}
+
 	}
 }

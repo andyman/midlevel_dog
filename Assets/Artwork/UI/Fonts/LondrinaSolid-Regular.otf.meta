@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9abf58989310e0544b88d65148cd4af6
+guid: 516ef8c7a81d6654396e184dcbf20dbc
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - alarm clock
+  - Londrina Solid
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

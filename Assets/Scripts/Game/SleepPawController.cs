@@ -19,6 +19,8 @@ public class SleepPawController : MonoBehaviour
 	private float horizontal;
 	private float vertical;
 
+	private float slapUntilTime;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -28,7 +30,15 @@ public class SleepPawController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		pawDown = Input.GetButton("Jump");
+		if (Input.GetButtonDown("Jump"))
+		{
+			slapUntilTime = Time.time + 0.1f;
+			pawDown = true;
+		}
+		if (Time.time > slapUntilTime)
+		{
+			pawDown = false;
+		}
 		horizontal = Input.GetAxis("Horizontal");
 		vertical = Input.GetAxis("Vertical");
 	}
