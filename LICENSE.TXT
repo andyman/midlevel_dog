@@ -1,4 +1,4 @@
-This work is licensed under the Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+Except for third party assets, this work is licensed under the Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
 
 For more information and details about the license:
 https://creativecommons.org/licenses/by-nc-nd/4.0/
@@ -28,19 +28,38 @@ You do not have to comply with the license for elements of the material in the p
 
 No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
 
-
 __________________________________________
 3rd Party Attributions Not Covered In This License
 
 "Patopian 1986 font" by David J Patterson
 https://www.dafont.com/patopian-1986.font
 
+"Londrina" font by Marcelo Magalhães Pereira. 100% Free license
+https://www.dafont.com/londrina.font
+
 "Night Sounds of Holland" by Selector. Creative Commons 0 License. https://freesound.org/people/Selector/sounds/395069/
 
-"Tango Sans" font by Sandy Luke. 100% Free License
+"Alarm Clock" by dcloh. CC0. https://freesound.org/people/dcloh/sounds/509684/
 
 "Roboto" fonts designed by Christian Robertson. These fonts are licensed under the Apache License, Version 2.0.
 
 "IM Fell French Canon" Font by Igino Marini, (c) 2004.
 The Fell Types are digitally reproduced by Igino Marini. www.iginomarini.com.
 
+"Tango Sans" Font by Sandy Luke. 100% Free License
+https://www.dafont.com/tangosans.font
+
+The following music was used for this media project:
+Music: Star Dreams Loop [Loop] by MusicLFiles
+Free download: https://filmmusic.io/song/9631-star-dreams-loop-loop
+License (CC BY 4.0): https://filmmusic.io/standard-license
+Artist website: https://cemmusicproject.wixsite.com/musiclibraryfiles
+
+The following music was used for this media project:
+Music: Night of the Owl by Kevin MacLeod
+Free download: https://filmmusic.io/song/4128-night-of-the-owl
+License (CC BY 4.0): https://filmmusic.io/standard-license
+Artist website: https://incompetech.com
+
+"Coin Pickup" Sound V 0.2 by Davidsraba. CC0. 
+https://freesound.org/people/Davidsraba/sounds/347174/
