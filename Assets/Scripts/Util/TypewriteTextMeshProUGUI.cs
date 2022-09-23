@@ -17,6 +17,8 @@ public class TypewriteTextMeshProUGUI : MonoBehaviour
 	public UnityEvent doneEvent;
 	public AudioSet keySounds;
 
+	public bool skippable = true;
+
 	void Awake()
 	{
 		txt = GetComponent<TextMeshProUGUI>();
@@ -30,6 +32,13 @@ public class TypewriteTextMeshProUGUI : MonoBehaviour
 		}
 	}
 
+	public void Update()
+	{
+		if (skippable && (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire1")))
+		{
+			_done = true;
+		}
+	}
 	private void OnEnable()
 	{
 		story = txt.text;
@@ -48,19 +57,24 @@ public class TypewriteTextMeshProUGUI : MonoBehaviour
 		float startTime = Time.time;
 		foreach (char c in story)
 		{
+			if (_done) break;
 			txt.text += c;
 			if (c != ' ' && c != '\n')
 			{
 				keySounds.PlayRandom(camTran.position + Vector3.forward);
 			}
 			yield return new WaitForSeconds(keyDelay * Random.Range(0.8f, 1.2f));
+			if (_done) break;
 			if (c == '\n' || c == '.')
 			{
 				yield return new WaitForSeconds(keyDelay * Random.Range(0.8f, 1.2f));
 			}
+			if (_done) break;
+
 		}
 
 		_done = true;
+		txt.text = story;
 		doneEvent.Invoke();
 		float endTime = Time.time;
 
