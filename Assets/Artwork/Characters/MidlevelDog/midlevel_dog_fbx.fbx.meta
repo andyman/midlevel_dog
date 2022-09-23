@@ -64,10 +64,14 @@ ModelImporter:
       differences with original animation were found.\n\nRetargeting quality report
       for clip 'Armature|Idle Stand':\n\tRetargeting quality is good. No significant
       differences with original animation were found.\n\nRetargeting quality report
-      for clip 'Armature|MouthClosed':\n\tRetargeting quality is good. No significant
-      differences with original animation were found.\n\nRetargeting quality report
-      for clip 'Armature|MouthOpened':\n\tRetargeting quality is good. No significant
-      differences with original animation were found.\n"
+      for clip 'Armature|Jump':\n\tRetargeting quality is good. No significant differences
+      with original animation were found.\n\nRetargeting quality report for clip
+      'Armature|MouthClosed':\n\tRetargeting quality is good. No significant differences
+      with original animation were found.\n\nRetargeting quality report for clip
+      'Armature|MouthOpened':\n\tRetargeting quality is good. No significant differences
+      with original animation were found.\n\nRetargeting quality report for clip
+      'Armature|Running':\n\tRetargeting quality is good. No significant differences
+      with original animation were found.\n"
     animationDoRetargetingWarnings: 1
     importAnimatedCustomProperties: 0
     importConstraints: 0
@@ -699,6 +703,64 @@ ModelImporter:
       name: Armature|idle sit.computer
       takeName: Armature|idle sit.computer
       internalID: 5403608920629875027
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Running
+      takeName: Armature|Running
+      internalID: 611949684932768935
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Jump
+      takeName: Armature|Jump
+      internalID: 2621294876549049306
       firstFrame: 0
       lastFrame: 9
       wrapMode: 0
