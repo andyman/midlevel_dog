@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
+using UnityEngine.Events;
 public class DreamLevelController : MonoBehaviour
 {
+	static bool endResultRested = false;
+
 	public DreamRunController dreamRunController;
 	public ClockBlinker clockBlinker;
 	public ParticleSystem maskParticleSystem;
@@ -14,7 +16,7 @@ public class DreamLevelController : MonoBehaviour
 
 	public ParticleSystem dreamGrabParticleSystem;
 
-	private float dreamLevel = 0.0f;
+	private float dreamLevel = 1.0f;
 	public Camera cam;
 	public bool dreamingStarted = false;
 	private ParticleSystem.EmissionModule maskParticleSystemEmission;
@@ -48,6 +50,9 @@ public class DreamLevelController : MonoBehaviour
 	private float restSlideYellowUntilTime;
 
 	public AudioSet bonePickupAudio;
+
+	public UnityEvent endRestedEvent;
+	public UnityEvent endUnrestedEvent;
 
 	public void RefreshUI()
 	{
@@ -88,6 +93,11 @@ public class DreamLevelController : MonoBehaviour
 		dreamBounds = dreamBoundsCollider.bounds;
 	}
 
+	private void Awake()
+	{
+		endResultRested = false;
+	}
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -117,7 +127,7 @@ public class DreamLevelController : MonoBehaviour
 		maskParticleSystemEmission.rateOverTime = fullEmissionRate * dreamLevelSquared;
 
 		dreamMusic.volume = dreamLevel * 0.25f;
-		dreamMusic.pitch = dreamLevelSquared;
+		dreamMusic.pitch = Mathf.Sqrt(dreamLevel);
 
 		dreamRunController.controllable = !ringing;
 
@@ -148,7 +158,30 @@ public class DreamLevelController : MonoBehaviour
 				}
 			}
 		}
+
+
+		if (restedness == 1.0f)
+		{
+			Debug.Log("End level: rested");
+			dreamingStarted = false;
+			endResultRested = true;
+			endRestedEvent.Invoke();
+		}
+		else if (depthOfSleep == 0.0f)
+		{
+			Debug.Log("End level: tired");
+			dreamingStarted = false;
+			endResultRested = false;
+			endUnrestedEvent.Invoke();
+		}
+
 	}
+
+	public void LoadTwoWolves()
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("TwoWolves");
+	}
+
 
 	public void AddBone()
 	{

@@ -59,6 +59,7 @@ public class ClockBlinker : MonoBehaviour
 			alarmEvent.Invoke();
 			dogSnorer.timeMultiplier = 2.0f;
 			alarmSounder.SetActive(true);
+			timeRate = 4.0f;
 		}
 
 		if (Time.time > nextUpdateTime)
