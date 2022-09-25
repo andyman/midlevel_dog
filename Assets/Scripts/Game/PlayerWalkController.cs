@@ -26,6 +26,8 @@ public class PlayerWalkController : MonoBehaviour
 
 	public BoxCollider safeBounds;
 
+	public bool canJump = false;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -38,8 +40,8 @@ public class PlayerWalkController : MonoBehaviour
 	{
 		if (controllable)
 		{
-			jumpPressed = Input.GetButtonDown("Jump");
-			jumpHeld = Input.GetButton("Jump");
+			jumpPressed = canJump && Input.GetButtonDown("Jump");
+			jumpHeld = canJump && Input.GetButton("Jump");
 
 			inputAxis = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 			if (inputAxis.magnitude > 1.0f)
@@ -105,16 +107,17 @@ public class PlayerWalkController : MonoBehaviour
 
 			playerRb.velocity = v;
 			grounded = false;
+			jumpPressed = false;
 		}
 
-		//if (!grounded && !jumpHeld)
-		//{
-		//	// fall faster when jump not held down
-		//	v = playerRb.velocity;
-		//	v.y += Physics.gravity.y * Time.deltaTime * fallGravityMultiplier;
+		if (!grounded && !jumpHeld)
+		{
+			// fall faster when jump not held down
+			v = playerRb.velocity;
+			v.y += Physics.gravity.y * Time.deltaTime * fallGravityMultiplier;
 
-		//	playerRb.velocity = v;
-		//}
+			playerRb.velocity = v;
+		}
 
 
 	}

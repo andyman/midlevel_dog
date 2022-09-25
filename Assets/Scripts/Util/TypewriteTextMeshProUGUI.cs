@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 // attach to UI Text component (with the full text already there)
 
+[System.Serializable]
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class TypewriteTextMeshProUGUI : MonoBehaviour
 {

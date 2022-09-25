@@ -55,7 +55,7 @@ public class Interactor : MonoBehaviour
 
 		if (closestInteractable != null)
 		{
-			if (Input.GetKeyDown(KeyCode.E))
+			if (Input.GetButtonDown("Jump"))
 			{
 				closestInteractable.Interact();
 			}

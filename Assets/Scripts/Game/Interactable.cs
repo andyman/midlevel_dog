@@ -14,7 +14,7 @@ public class Interactable : MonoBehaviour
 
 	public bool oneTimeUse = false;
 	public bool used = false;
-
+	public AudioSet interactionSound = null;
 
 	// Start is called before the first frame update
 	void Start()
@@ -47,6 +47,10 @@ public class Interactable : MonoBehaviour
 		Debug.Log("Interact with " + name);
 
 		interactEvent.Invoke();
+		if (interactionSound != null)
+		{
+			interactionSound.PlayRandom(transform.position);
+		}
 
 		if (oneTimeUse)
 		{

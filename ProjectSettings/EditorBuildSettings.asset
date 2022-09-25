@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TwoWolves.unity
     guid: cfe17a2a767801c428fac6addb928a1c
   - enabled: 1
+    path: Assets/Scenes/Commute.unity
+    guid: 757fcbb00b24c5a42af94aa6d14de958
+  - enabled: 1
     path: Assets/Scenes/Office.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}
