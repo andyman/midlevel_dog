@@ -83,7 +83,7 @@ public class CommuteLevelController : MonoBehaviour
 		if (levelDone) return;
 		scents += 1.0f;
 
-		if (scents >= 50)
+		if (scents >= maxScents)
 		{
 			levelDone = true;
 

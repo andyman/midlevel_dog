@@ -60,8 +60,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xParameter: mouth
-  minInterval: 0.1
-  maxInterval: 0.5
+  minInterval: 1
+  maxInterval: 5
   minValue: -1
   maxValue: 0
   minTimeBetweenInterval: 0
@@ -104,8 +104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xParameter: mouth
-  minInterval: 0.1
-  maxInterval: 0.5
+  minInterval: 1
+  maxInterval: 5
   minValue: -1
   maxValue: 1
   minTimeBetweenInterval: 0
@@ -173,8 +173,9 @@ AnimatorState:
   m_StateMachineBehaviours:
   - {fileID: 6543715179480145280}
   - {fileID: -392211879429018996}
+  - {fileID: 2301045383435984315}
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -1040,6 +1041,28 @@ AnimatorTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 1
+--- !u!114 &2301045383435984315
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bab5cf8c49daa640b184d010b267a9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xParameter: hips.x
+  yParameter: hips.y
+  minInterval: 1
+  maxInterval: 4
+  minValue: 0
+  maxValue: 0
+  minY: 0
+  maxY: 0
+  minTimeBetweenInterval: 0
+  maxTimeBetweenInterval: 0
 --- !u!1102 &3151429631754523419
 AnimatorState:
   serializedVersion: 6

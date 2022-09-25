@@ -92,7 +92,7 @@ public class KeyboardMouseHandsController : MonoBehaviour
 			startPosL = ikHandL.position;
 
 			// play audio
-			if (!mouseMode)
+			if (!mouseMode && typeAudioSet != null)
 			{
 				typeAudioSet.PlayRandom(ikHandL.position);
 			}
@@ -118,7 +118,7 @@ public class KeyboardMouseHandsController : MonoBehaviour
 		if (time > endTimeR)
 		{
 			// play audio
-			if (!mouseMode)
+			if (!mouseMode && typeAudioSet != null)
 			{
 				typeAudioSet.PlayRandom(ikHandR.position);
 			}
