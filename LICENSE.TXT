@@ -37,8 +37,6 @@ https://www.dafont.com/patopian-1986.font
 "Londrina" font by Marcelo Magalhães Pereira. 100% Free license
 https://www.dafont.com/londrina.font
 
-"Night Sounds of Holland" by Selector. Creative Commons 0 License. https://freesound.org/people/Selector/sounds/395069/
-
 "Alarm Clock" by dcloh. CC0. https://freesound.org/people/dcloh/sounds/509684/
 
 "Roboto" fonts designed by Christian Robertson. These fonts are licensed under the Apache License, Version 2.0.
@@ -64,9 +62,34 @@ Artist website: https://incompetech.com
 "Coin Pickup" Sound V 0.2 by Davidsraba. CC0. 
 https://freesound.org/people/Davidsraba/sounds/347174/
 
-The following music was used for this media project:
-Music: Emotional Solitude Piano Background by MusicLFiles
-Free download: https://filmmusic.io/song/8373-emotional-solitude-piano-background
-License (CC BY 4.0): https://filmmusic.io/standard-license
-Artist website: https://cemmusicproject.wixsite.com/musiclibraryfiles
+"Sword Drawing 2.wav" by paulfabb. CC0
+https://freesound.org/people/paulfabb/sounds/577620/
 
+"Sword Swipes" by deleted_user_6479820. CC0
+https://freesound.org/people/deleted_user_6479820/sounds/380488/
+
+"Campfire.wav" by ecfike. CC0
+https://freesound.org/people/ecfike/sounds/128704/
+
+"Bubbles_01.wav" by cartoonRob. CC0
+https://freesound.org/people/cartoonrob/sounds/588468/
+
+"Plastic Jug" by recheek. CC0
+https://freesound.org/people/redcheek/sounds/210508/
+
+"poop plop.mp3" by Kiyoshiakira. CC0
+https://freesound.org/people/Kiyoshiakira/sounds/436396/
+
+"2_Beagle_Eating_Bowl" by 16G_Panska_Dolezal_Stepan. CC0
+https://freesound.org/people/16G_Panska_Dolezal_Stepan/sounds/498701/
+
+"Night Sounds of Holland" by Selector. Creative Commons 0 License. https://freesound.org/people/Selector/sounds/395069/
+
+"Single Bark of a dog" by exe2be. CC0
+https://freesound.org/people/exe2be/sounds/535457/
+
+"Sassy Husky" by antisocialhermitcrab. CC0
+https://freesound.org/people/antisocialhermitcrab/sounds/570959/
+
+"dog-howling.wav" by simcotter. CC0
+https://freesound.org/people/simcotter/sounds/115357/
