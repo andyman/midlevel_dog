@@ -7,6 +7,7 @@ public class CommutePlayerController : MonoBehaviour
 	public Animator anim;
 
 	public float stickOut = 0.0f;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -19,8 +20,9 @@ public class CommutePlayerController : MonoBehaviour
 	void Update()
 	{
 		float pressed = Input.GetButton("Jump") ? 1.0f : 0.0f;
-		stickOut = Mathf.Lerp(stickOut, pressed, Time.deltaTime * 2.0f);
+		stickOut = Mathf.Lerp(stickOut, pressed, Time.deltaTime * 5.0f);
 
 		anim.SetFloat("stickout", stickOut);
+
 	}
 }
