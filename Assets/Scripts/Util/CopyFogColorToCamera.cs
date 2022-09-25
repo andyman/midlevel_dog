@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class CopyFogColorToCamera : MonoBehaviour
 {
 	public Camera cam;
@@ -9,6 +10,9 @@ public class CopyFogColorToCamera : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		cam.backgroundColor = RenderSettings.fogColor;
+		if (cam != null)
+		{
+			cam.backgroundColor = RenderSettings.fogColor;
+		}
 	}
 }
