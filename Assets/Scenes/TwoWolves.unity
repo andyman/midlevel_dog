@@ -11385,6 +11385,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: -873611957045770383, guid: 429ca283678d087438f5ef6de50d2ce3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -437740106160756592, guid: 429ca283678d087438f5ef6de50d2ce3,
         type: 3}
       propertyPath: m_Layer
@@ -11555,6 +11560,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 93110096fa4a8cf4ba3a8360b37ec077, type: 2}
+    - target: {fileID: 4525988032204103070, guid: 429ca283678d087438f5ef6de50d2ce3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4695988177486085469, guid: 429ca283678d087438f5ef6de50d2ce3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12336,7 +12346,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'CHAPTER 2
 
-    Get dressed for a dog-eat-dog day'
+    TWO WOLVES IN YOUR WARDROBE
+
+
+    What is a good outfit
+    to wear for today?
+
+    Let your inner wisdom decide.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee22f32fe95af5842b2f61b525215f53, type: 2}
   m_sharedMaterial: {fileID: -8427620232313982000, guid: ee22f32fe95af5842b2f61b525215f53,
@@ -15389,7 +15405,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BackGroundColor: {r: 0.1509434, g: 0.09754361, b: 0.1462009, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

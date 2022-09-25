@@ -170,7 +170,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.26, y: 1}
+    m_SensorSize: {x: 1.6, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -27644,7 +27644,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'CHAPTER 1
 
-    Let Sleeping Dogs Lie'
+    LET SLEEPING DOGS LIE
+
+
+    This is the best part of Rodney''s
+    day.
+
+    It all goes downhill after here.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee22f32fe95af5842b2f61b525215f53, type: 2}
   m_sharedMaterial: {fileID: -8427620232313982000, guid: ee22f32fe95af5842b2f61b525215f53,
@@ -28585,7 +28591,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.26, y: 1}
+    m_SensorSize: {x: 1.6, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
