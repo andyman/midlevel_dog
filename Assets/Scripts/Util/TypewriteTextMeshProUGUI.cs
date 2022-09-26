@@ -62,7 +62,10 @@ public class TypewriteTextMeshProUGUI : MonoBehaviour
 			txt.text += c;
 			if (c != ' ' && c != '\n')
 			{
-				keySounds.PlayRandom(camTran.position + Vector3.forward);
+				if (keySounds != null)
+				{
+					keySounds.PlayRandom(camTran.position + Vector3.forward);
+				}
 			}
 			yield return new WaitForSeconds(keyDelay * Random.Range(0.8f, 1.2f));
 			if (_done) break;

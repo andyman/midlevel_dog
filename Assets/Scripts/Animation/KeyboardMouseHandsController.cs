@@ -5,6 +5,8 @@ using UnityEngine;
 // moves the dog's hands over the keyboard and mouse
 public class KeyboardMouseHandsController : MonoBehaviour
 {
+	public bool mute = false;
+
 	public Animator animator;
 
 	public Transform ikHandL;
@@ -36,6 +38,16 @@ public class KeyboardMouseHandsController : MonoBehaviour
 	// lower the more productive
 	public float sluggishness = 1.0f;
 	public AudioSet typeAudioSet;
+
+	public void Mute()
+	{
+		mute = true;
+	}
+
+	public void Unmute()
+	{
+		mute = false;
+	}
 
 	// Start is called before the first frame update
 	void Start()
@@ -83,6 +95,8 @@ public class KeyboardMouseHandsController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if (animator == null) return;
+
 		float time = Time.time;
 
 		if (time > endTimeL)
@@ -92,7 +106,7 @@ public class KeyboardMouseHandsController : MonoBehaviour
 			startPosL = ikHandL.position;
 
 			// play audio
-			if (!mouseMode && typeAudioSet != null)
+			if (!mute && !mouseMode && typeAudioSet != null)
 			{
 				typeAudioSet.PlayRandom(ikHandL.position);
 			}
@@ -118,7 +132,7 @@ public class KeyboardMouseHandsController : MonoBehaviour
 		if (time > endTimeR)
 		{
 			// play audio
-			if (!mouseMode && typeAudioSet != null)
+			if (!mute && !mouseMode && typeAudioSet != null)
 			{
 				typeAudioSet.PlayRandom(ikHandR.position);
 			}
