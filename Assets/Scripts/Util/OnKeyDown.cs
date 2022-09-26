@@ -6,7 +6,6 @@ public class OnKeyDown : MonoBehaviour
 {
 	public KeyCode keyCode;
 	public UnityEvent action;
-
 	// Start is called before the first frame update
 	void Start()
 	{
