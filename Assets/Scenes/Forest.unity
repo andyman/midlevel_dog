@@ -8,9 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 0.5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 99c9720ab356a0642a771bea13969a05
-  m_OcclusionCullingData: {fileID: 36300000, guid: dff5e5d334b2ac740a1bb970bf73a276,
-    type: 2}
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -385,8 +384,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.009081394, y: 0.99089813, z: -0.098118246, w: 0.09171317}
-  m_LocalPosition: {x: -0.91769433, y: 2, z: 4.915062}
+  m_LocalRotation: {x: 0.009081391, y: 0.99089813, z: -0.0981182, w: 0.09171318}
+  m_LocalPosition: {x: -0.9176945, y: 2, z: 4.9150634}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -448,7 +447,7 @@ MonoBehaviour:
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
-    m_Style: 1
+    m_Style: 0
     m_Time: 2
     m_CustomCurve:
       serializedVersion: 2
@@ -12315,7 +12314,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -12331,8 +12330,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219642384}
-  m_LocalRotation: {x: 0.009081394, y: 0.99089813, z: -0.098118246, w: 0.09171317}
-  m_LocalPosition: {x: -0.91769433, y: 2, z: 4.915062}
+  m_LocalRotation: {x: 0.009081391, y: 0.99089813, z: -0.0981182, w: 0.09171318}
+  m_LocalPosition: {x: -0.9176945, y: 2, z: 4.9150634}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
