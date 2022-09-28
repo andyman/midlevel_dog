@@ -49,22 +49,29 @@ public class WolfInside : MonoBehaviour
 		}
 		else if (Time.time > nextStateTime)
 		{
-			bool contains = false;
-			int tries = 0;
-			do
-			{
-				Vector2 circle = Random.insideUnitCircle * 10.0f;
+			//bool contains = false;
+			//int tries = 0;
+			//do
+			//{
+			//	Vector2 circle = Random.insideUnitCircle * 10.0f;
 
-				destinationPoint = transform.position + new Vector3(circle.x, 0.0f, circle.y);
-				contains = levelController.levelBounds.bounds.Contains(destinationPoint);
-			} while (!contains && tries < 8);
+			//	destinationPoint = transform.position + new Vector3(circle.x, 0.0f, circle.y);
+			//	contains = levelController.levelBounds.bounds.Contains(destinationPoint);
+			//} while (!contains && tries < 8);
 
-			hasDestination = contains;
-			if (contains)
-			{
-				nextStateTime = Time.time + Random.Range(5.0f, 10.0f);
 
-			}
+			//hasDestination = contains;
+			//if (contains)
+			//{
+			//	nextStateTime = Time.time + Random.Range(5.0f, 10.0f);
+
+			//}
+
+			// get to another bone
+			Vector3 dest = levelController.bones[Random.Range(0, levelController.bones.Count)].transform.position;
+			dest.y = 0.0f;
+			destinationPoint = dest;
+			nextStateTime = Time.time + Random.Range(5.0f, 10.0f);
 		}
 	}
 	private void FixedUpdate()

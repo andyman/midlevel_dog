@@ -35,6 +35,15 @@ public class PlayerWalkController : MonoBehaviour
 		anim.SetBool("grounded", true);
 	}
 
+	public void SetControllable()
+	{
+		controllable = true;
+	}
+	public void SetUncontrollable()
+	{
+		controllable = false;
+	}
+
 	// Update is called once per frame
 	void Update()
 	{

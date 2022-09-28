@@ -43,19 +43,19 @@ public class TwoWolvesLevelController : MonoBehaviour
 	{
 		bowTieLived = false;
 
-		Bounds bounds = levelBounds.bounds;
+		//Bounds bounds = levelBounds.bounds;
 
-		for (int i = 0; i < boneStartCount; i++)
-		{
-			Vector3 pos = new Vector3(
-				Random.Range(bounds.min.x, bounds.max.x),
-				0.5f,
-				Random.Range(bounds.min.z, bounds.max.z)
-				);
+		//for (int i = 0; i < boneStartCount; i++)
+		//{
+		//	Vector3 pos = new Vector3(
+		//		Random.Range(bounds.min.x, bounds.max.x),
+		//		0.5f,
+		//		Random.Range(bounds.min.z, bounds.max.z)
+		//		);
 
-			TwoWolvesBone bone = Instantiate<TwoWolvesBone>(bonePrefab, pos, Quaternion.LookRotation(Random.onUnitSphere));
-			bones.Add(bone);
-		}
+		//	TwoWolvesBone bone = Instantiate<TwoWolvesBone>(bonePrefab, pos, Quaternion.LookRotation(Random.onUnitSphere));
+		//	bones.Add(bone);
+		//}
 
 		cleaverAttackTrigger = equippedCleaver.GetComponent<CleaverAttackTrigger>();
 	}
@@ -106,17 +106,28 @@ public class TwoWolvesLevelController : MonoBehaviour
 		Debug.Log("White Wolf Died");
 		bowTieLived = true;
 		WolfDied();
+		StartCoroutine(DelayedBlueHeartShow());
+	}
+	private IEnumerator DelayedBlueHeartShow()
+	{
+		yield return new WaitForSeconds(2.0f);
 		blueHeartProp.transform.position = whiteWolf.transform.position + Vector3.up * 0.25f;
 		blueHeartProp.gameObject.SetActive(true);
-	}
 
+	}
 	public void BlackWolfDied()
 	{
 		Debug.Log("Black wolf died");
 		bowTieLived = false;
 		WolfDied();
+		StartCoroutine(DelayedRedHeartShow());
+	}
+	private IEnumerator DelayedRedHeartShow()
+	{
+		yield return new WaitForSeconds(2.0f);
 		redHeartProp.transform.position = blackWolf.transform.position + Vector3.up * 0.25f;
 		redHeartProp.gameObject.SetActive(true);
+
 	}
 
 	public void BlueHeartGrabbed()
