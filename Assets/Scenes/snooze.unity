@@ -6430,9 +6430,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You wake up feeling fully rested.
+  m_text: 'Rodney wakes up feeling fully rested.
 
-    Now you must get dressed for work...'
+    Now he must get dressed for
+    work...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee22f32fe95af5842b2f61b525215f53, type: 2}
   m_sharedMaterial: {fileID: -8427620232313982000, guid: ee22f32fe95af5842b2f61b525215f53,
@@ -11611,6 +11612,7 @@ GameObject:
   - component: {fileID: 496261509}
   - component: {fileID: 496261508}
   - component: {fileID: 496261507}
+  - component: {fileID: 496261511}
   m_Layer: 5
   m_Name: IntroCanvas
   m_TagString: Untagged
@@ -11701,6 +11703,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &496261511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496261506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de338e0b5c6934e418ec92329a86afea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &496441441
 GameObject:
   m_ObjectHideFlags: 0
@@ -27647,10 +27661,10 @@ MonoBehaviour:
     LET SLEEPING DOGS LIE
 
 
-    This is the best part of Rodney''s
-    day.
+    Rodney dreads waking up in
+    the morning.
 
-    It all goes downhill after here.'
+    In his dreams, he is happy in the forest.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee22f32fe95af5842b2f61b525215f53, type: 2}
   m_sharedMaterial: {fileID: -8427620232313982000, guid: ee22f32fe95af5842b2f61b525215f53,
@@ -34358,10 +34372,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You wake up feeling tired and grumpy.
+  m_text: 'Rodney wakes up feeling tired and grumpy.
 
-    Now you must get dressed for
-    work...'
+    Now he must get dressed
+    for work...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee22f32fe95af5842b2f61b525215f53, type: 2}
   m_sharedMaterial: {fileID: -8427620232313982000, guid: ee22f32fe95af5842b2f61b525215f53,
@@ -35085,7 +35099,7 @@ MonoBehaviour:
   depthOfSleep: 1
   restedness: 0
   restednessPerBone: 0.05
-  alarmDepthRate: -0.025
+  alarmDepthRate: -0.05
   depthDecay: -0.005
   restSlider: {fileID: 819586759}
   depthOfSleepSlider: {fileID: 772151973}
@@ -52050,7 +52064,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 1
 --- !u!65 &2712990237221893403
 BoxCollider:

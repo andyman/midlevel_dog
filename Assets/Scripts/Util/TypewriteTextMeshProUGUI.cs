@@ -12,7 +12,7 @@ public class TypewriteTextMeshProUGUI : MonoBehaviour
 
 	TextMeshProUGUI txt;
 	string story;
-	public float keyDelay = 0.1f;
+	public float keyDelay = 0.05f;
 	private bool _done = false;
 
 	public UnityEvent doneEvent;
@@ -55,7 +55,7 @@ public class TypewriteTextMeshProUGUI : MonoBehaviour
 		txt.text = "";
 		Transform camTran = Camera.main.transform;
 
-		float startTime = Time.time;
+		float startTime = Time.unscaledTime;
 		foreach (char c in story)
 		{
 			if (_done) break;
@@ -80,7 +80,7 @@ public class TypewriteTextMeshProUGUI : MonoBehaviour
 		_done = true;
 		txt.text = story;
 		doneEvent.Invoke();
-		float endTime = Time.time;
+		float endTime = Time.unscaledTime;
 
 		float duration = endTime - startTime;
 		//Debug.Log("Duration: " + duration);

@@ -187,7 +187,7 @@ public class DreamLevelController : MonoBehaviour
 	{
 		Vector3 pos = new Vector3(
 			Random.Range(dreamBounds.min.x, dreamBounds.max.x),
-			Random.Range(dreamBounds.min.y, dreamBounds.min.y + 2.0f),
+			Random.Range(dreamBounds.min.y, dreamBounds.min.y + 1.5f),
 			dreamBounds.max.z + 5.0f
 			);
 

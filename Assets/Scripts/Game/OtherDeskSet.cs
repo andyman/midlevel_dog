@@ -26,6 +26,8 @@ public class OtherDeskSet : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if (officeLevelController == null) return;
+
 		if (officeLevelController.letterWritten || officeLevelController.firings >= officeLevelController.maxFirings)
 		{
 			interactable.enabled = false;
