@@ -293,6 +293,7 @@ GameObject:
   - component: {fileID: 20595129}
   - component: {fileID: 20595128}
   - component: {fileID: 20595127}
+  - component: {fileID: 20595131}
   m_Layer: 5
   m_Name: OutroCanvas
   m_TagString: Untagged
@@ -376,13 +377,42 @@ RectTransform:
   m_Children:
   - {fileID: 1267334155}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &20595131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20595126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb636f43e9bf3014b83d13d89bb6685c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  resetCoroutines: 1
+  events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1969646234}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &34667684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,7 +1264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You reach the office with
+  m_text: 'Rodney reaches the office with
 
     a nose full of good scents...'
   m_isRightToLeft: 0
@@ -1367,7 +1397,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &276001332
 GameObject:
@@ -1885,7 +1915,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You reach the office with
+  m_text: 'Rodney reaches the office with
 
     a cough and a headache.'
   m_isRightToLeft: 0
@@ -8545,7 +8575,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &825919744
 GameObject:
@@ -14456,7 +14486,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1091217313
 GameObject:
@@ -25351,7 +25381,7 @@ PrefabInstance:
     - target: {fileID: 7320638835426378454, guid: 1f1e136cd1b6d58479ba1db9713d066b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7320638835426378454, guid: 1f1e136cd1b6d58479ba1db9713d066b,
         type: 3}
@@ -25554,7 +25584,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1377523286
 GameObject:
@@ -25625,7 +25655,7 @@ Transform:
   m_Children:
   - {fileID: 1308230128}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 6.36, y: 15.15, z: 0}
 --- !u!1 &1410833502
 GameObject:
@@ -25944,7 +25974,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.6, y: 1}
   m_Transitions:
     m_BlendHint: 1
     m_InheritPosition: 0
@@ -25967,7 +25997,7 @@ Transform:
   m_Children:
   - {fileID: 831308431}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1439513719 stripped
 Transform:
@@ -26337,7 +26367,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 15.6, y: 115.2, z: 0}
 --- !u!114 &1495036373
 MonoBehaviour:
@@ -26987,7 +27017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1563404037
 Transform:
   m_ObjectHideFlags: 0
@@ -27001,7 +27031,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1563404038
 MonoBehaviour:
@@ -27063,7 +27093,7 @@ MonoBehaviour:
         m_CallState: 1
   scentSpawnZone: {fileID: 1919133284}
   chanceOfGoodScent: 1
-  spawnInterval: {x: 1, y: 3}
+  spawnInterval: {x: 0.5, y: 1.5}
   goodScentPrefab: {fileID: 5695403742019238118, guid: d181c7570d94d274bbc201ad33025954,
     type: 3}
   badScentPrefab: {fileID: 4153641210370433515, guid: d73b83cca017ac543a4e3ccfb8d5f2c8,
@@ -28030,7 +28060,7 @@ RectTransform:
   m_Children:
   - {fileID: 380472243}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -28251,7 +28281,7 @@ RectTransform:
   - {fileID: 2024572979}
   - {fileID: 696287812}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -28948,7 +28978,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2064201707
 MonoBehaviour:
@@ -29245,7 +29275,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 42d23185f7ea0274792c7c8c8f5e660d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 42d23185f7ea0274792c7c8c8f5e660d,
         type: 3}

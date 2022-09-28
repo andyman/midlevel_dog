@@ -98,7 +98,7 @@ public class CommuteLevelController : MonoBehaviour
 	public void BadScentCollected()
 	{
 		if (levelDone) return;
-		health -= 5.0f;
+		health -= 20.0f;
 
 		if (health <= 0.0f)
 		{
