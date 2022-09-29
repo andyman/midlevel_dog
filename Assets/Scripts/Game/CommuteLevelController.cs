@@ -5,6 +5,8 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 public class CommuteLevelController : MonoBehaviour
 {
+	public static bool goodCommute = false;
+
 	public CommutePlayerController player;
 
 	public bool spawning = false;
@@ -44,6 +46,7 @@ public class CommuteLevelController : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		goodCommute = false;
 		RefreshUI();
 	}
 

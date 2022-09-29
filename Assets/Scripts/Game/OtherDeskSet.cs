@@ -9,6 +9,7 @@ public class OtherDeskSet : MonoBehaviour
 	public Interactable interactable;
 	public OtherWorker otherWorker;
 	public AudioSet yelp;
+	public GameObject screenGlow;
 
 	[Multiline]
 	public string pleadMessage = "Please don't fire me!";
@@ -59,7 +60,15 @@ public class OtherDeskSet : MonoBehaviour
 		interactable.enabled = false;
 		interactable.gameObject.SetActive(false);
 		yelp.PlayRandom(transform.position);
-		Destroy(otherWorker.gameObject, 3.0f);
+
+		StartCoroutine(FireCoroutine());
+	}
+
+	public IEnumerator FireCoroutine()
+	{
+		yield return new WaitForSeconds(2.0f);
 		otherWorker.gameObject.SetActive(false);
+		screenGlow.gameObject.SetActive(false);
+
 	}
 }

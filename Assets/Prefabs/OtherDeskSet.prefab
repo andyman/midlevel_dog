@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire employee!
+  m_text: 'Talk to employee
 
     [SPACEBAR]'
   m_isRightToLeft: 0
@@ -1061,6 +1061,7 @@ MonoBehaviour:
   interactable: {fileID: 7586434475789495850}
   otherWorker: {fileID: 6368902962573357362}
   yelp: {fileID: 11400000, guid: 3ea90051bb67dbe4cacc57f1f285724d, type: 2}
+  screenGlow: {fileID: 5255706986230696066}
   pleadMessage: Please don't fire me!
   officeLevelController: {fileID: 0}
   fired: 0
@@ -1792,6 +1793,12 @@ PrefabInstance:
 --- !u!4 &1002648202663607925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3059918069457676742, guid: d9d4e849b9c12b94ba3a355fb8f9e17d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6368902962997078095}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5255706986230696066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8029102124907470643, guid: d9d4e849b9c12b94ba3a355fb8f9e17d,
     type: 3}
   m_PrefabInstance: {fileID: 6368902962997078095}
   m_PrefabAsset: {fileID: 0}

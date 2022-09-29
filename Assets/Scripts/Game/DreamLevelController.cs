@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 public class DreamLevelController : MonoBehaviour
 {
-	static bool endResultRested = false;
+	public static bool endResultRested = false;
 
 	public DreamRunController dreamRunController;
 	public ClockBlinker clockBlinker;

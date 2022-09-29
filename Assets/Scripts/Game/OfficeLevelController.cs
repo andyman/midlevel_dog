@@ -34,6 +34,7 @@ public class OfficeLevelController : MonoBehaviour
 	public UnityEvent letterWrittenEvent;
 
 	public AudioSource backgroundSound;
+	public AudioSource sadMusic;
 
 	public void TypingLetter()
 	{
@@ -78,7 +79,7 @@ public class OfficeLevelController : MonoBehaviour
 
 		if (letterWritten)
 		{
-			buf.Append("Message delivered.\nWalk to the exit.");
+			buf.Append("<color=#ff0>Message sent.</color>\n\nWalk stylishly in slow motion to the exit\nbefore Canine Resources can find you\nfor an \"exit interview\".");
 		}
 		else if (firings < maxFirings)
 		{
@@ -93,7 +94,7 @@ public class OfficeLevelController : MonoBehaviour
 			}
 
 			buf.Append(" or\n");
-			buf.Append("type up your resignation letter.");
+			buf.Append("type up your resignation letter\n(at your computer).");
 		}
 		else
 		{
@@ -131,7 +132,14 @@ public class OfficeLevelController : MonoBehaviour
 		var transposer = followCam.GetCinemachineComponent<CinemachineTransposer>();
 		transposer.m_FollowOffset = new Vector3(0.0f, 2.5f, -1.5f);
 
-		emailText.text += "P.S. Nice " + (TwoWolvesLevelController.bowTieLived ? "bowtie" : "necktie") + "! I must be paying you too much.";
+		if (TwoWolvesLevelController.bowTieLived)
+		{
+			emailText.text += "P.S. Nice fancy bowtie! I must be paying you too much.";
+		}
+		else
+		{
+			emailText.text += "P.S. What an nice necktie! Are you chasing for the vice lapdog position?";
+		}
 	}
 
 	public AudioSet keyClickSet;
@@ -156,7 +164,7 @@ public class OfficeLevelController : MonoBehaviour
 		{
 			if (Time.time >= firingStartTime && Time.time < firingEndTime)
 			{
-				firingCounter.text = Mathf.CeilToInt(firingEndTime - Time.time).ToString();
+				firingCounter.text = "FIRING IN " + Mathf.CeilToInt(firingEndTime - Time.time).ToString();
 				if (Input.GetButtonDown("Jump"))
 				{
 					CancelFiring(lastDeskSet);
@@ -198,12 +206,34 @@ public class OfficeLevelController : MonoBehaviour
 			maxFiringsEvent.Invoke();
 
 			// flip the camera
-
-			var transposer = followCam.GetCinemachineComponent<CinemachineTransposer>();
-			transposer.m_FollowOffset = new Vector3(0.0f, 2.5f, 1.5f);
+			StartCoroutine(SpinFollowCam180());
 		}
 	}
 
+	private IEnumerator SpinFollowCam180()
+	{
+		var transposer = followCam.GetCinemachineComponent<CinemachineTransposer>();
+		Vector3 initialOffset = transposer.m_FollowOffset;
+
+		float startTime = Time.time;
+		float endTime = Time.time + 3.0f;
+
+		Quaternion startRot = Quaternion.identity;
+		Quaternion endRot = Quaternion.Euler(0.0f, 150.0f, 0.0f);
+
+		while (Time.time < endTime)
+		{
+			yield return 0;
+
+			float lerpy = Mathf.InverseLerp(startTime, endTime, Time.time);
+			lerpy = Mathf.SmoothStep(0.0f, 1.0f, lerpy);
+
+			transposer.m_FollowOffset = Quaternion.Slerp(startRot, endRot, lerpy) * initialOffset;
+		}
+
+
+
+	}
 	public UnityEvent maxFiringsEvent;
 
 	public GameObject firingModal;
@@ -226,6 +256,16 @@ public class OfficeLevelController : MonoBehaviour
 		firingModal.SetActive(true);
 		firingCounter.text = "";
 		lastDeskSet = otherDeskSet;
+
+		if (!sadMusic.isPlaying)
+		{
+			sadMusic.Play();
+		}
+	}
+
+	public void ShowMoreGames()
+	{
+		Application.OpenURL("https://idumpling.com");
 
 	}
 }

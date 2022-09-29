@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class TwoWolvesLevelController : MonoBehaviour
 {
-	static public bool bowTieLived = false;
+	static public bool bowTieLived = true;
 
 	public PlayerWalkController player;
 	public Animator playerAnimator;
