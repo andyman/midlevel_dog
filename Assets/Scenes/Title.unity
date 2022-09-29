@@ -2528,7 +2528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb636f43e9bf3014b83d13d89bb6685c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 3
+  delay: 1
   resetCoroutines: 1
   events:
     m_PersistentCalls:
@@ -19010,7 +19010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3396226, g: 0.26070115, b: 0.23869699, a: 0.8}
+  m_Color: {r: 0.3396226, g: 0.26070115, b: 0.23869699, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -19049,7 +19049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetAlpha: 1
   currentAlpha: 0.8
-  transitionTime: 5
+  transitionTime: 3
   useUnscaledTime: 1
   destroyAfterUse: 0
   ui: {fileID: 945974033}
@@ -34661,7 +34661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -270.56, y: 20}
+  m_AnchoredPosition: {x: -279.51, y: 20}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1738467587
@@ -34676,7 +34676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb636f43e9bf3014b83d13d89bb6685c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 7
+  delay: 3
   resetCoroutines: 1
   events:
     m_PersistentCalls:
@@ -34706,6 +34706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyDelay: 0.1
+  delayBeforeEvent: 2
   doneEvent:
     m_PersistentCalls:
       m_Calls:
@@ -34755,8 +34756,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Meet Rodney, a middle-aged husky\ndog working as a mid-level manager,
-    \nin a dog-eat-dog corporate office.\n\nToday, Rodney will have a mid-life crisis."
+  m_text: "Meet Rodney, a middle-aged husky dog\nworking as a mid-level manager,
+    in a \ndog-eat-dog corporate office.\n\nThey say that every dog has its day.\nToday
+    might be that day for Rodney..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee22f32fe95af5842b2f61b525215f53, type: 2}
   m_sharedMaterial: {fileID: -8427620232313982000, guid: ee22f32fe95af5842b2f61b525215f53,
@@ -34766,8 +34768,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967040
-  m_fontColor: {r: 0, g: 1, b: 1, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -34841,7 +34843,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738467585}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5ecf407461524e42b456bdba3f173f0, type: 3}
   m_Name: 

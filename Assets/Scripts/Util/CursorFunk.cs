@@ -6,11 +6,11 @@ public class CursorFunk : MonoBehaviour
 {
 	public void Hide()
 	{
-		Cursor.visible = false;
+		//Cursor.visible = false;
 	}
 
 	public void Show()
 	{
-		Cursor.visible = true;
+		//Cursor.visible = true;
 	}
 }
