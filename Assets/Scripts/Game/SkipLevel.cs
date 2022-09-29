@@ -14,6 +14,7 @@ public class SkipLevel : MonoBehaviour
 		if (!pressed && Input.GetKeyDown(KeyCode.Slash))
 		{
 			pressed = true;
+			Time.timeScale = 1.0f;
 			SceneManager.LoadScene(nextScene);
 		}
 	}

@@ -90,7 +90,7 @@ public class TypewriteTextMeshProUGUI : MonoBehaviour
 
 	IEnumerator StartDoneEvent()
 	{
-		yield return new WaitForSecondsRealtime(delayBeforeEvent);
+		yield return new WaitForSeconds(delayBeforeEvent);
 		doneEvent.Invoke();
 	}
 
