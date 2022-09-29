@@ -2348,6 +2348,7 @@ GameObject:
   - component: {fileID: 198260369}
   - component: {fileID: 198260368}
   - component: {fileID: 198260370}
+  - component: {fileID: 198260371}
   m_Layer: 5
   m_Name: Press Space To Start
   m_TagString: Untagged
@@ -2382,7 +2383,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198260366}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -2515,6 +2516,35 @@ MonoBehaviour:
         m_CallState: 1
   singleUse: 1
   used: 0
+--- !u!114 &198260371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198260366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb636f43e9bf3014b83d13d89bb6685c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 3
+  resetCoroutines: 1
+  events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198260368}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1
 --- !u!4 &215685661 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9109781811372625594, guid: 72195ed56d2ca754da8b616799e06a8f,
@@ -15936,6 +15966,7 @@ GameObject:
   - component: {fileID: 851571205}
   - component: {fileID: 851571207}
   - component: {fileID: 851571206}
+  - component: {fileID: 851571208}
   m_Layer: 5
   m_Name: You may need to
   m_TagString: Untagged
@@ -15970,7 +16001,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851571204}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -15983,10 +16014,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You may need to click inside this window
-
-    first so that it can receive
-    keyboard inputs.'
+  m_text: (Click here first if it doesn't work)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee22f32fe95af5842b2f61b525215f53, type: 2}
   m_sharedMaterial: {fileID: -8427620232313982000, guid: ee22f32fe95af5842b2f61b525215f53,
@@ -16064,6 +16092,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851571204}
   m_CullTransparentMesh: 1
+--- !u!114 &851571208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851571204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb636f43e9bf3014b83d13d89bb6685c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 3
+  resetCoroutines: 1
+  events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 851571206}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1
 --- !u!4 &861987523 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5396013533759867739, guid: fcd2c235b7f70244b9a5bc5318fbcb05,
@@ -25106,6 +25163,51 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1450309366}
+--- !u!1 &1250286970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1250286972}
+  - component: {fileID: 1250286971}
+  m_Layer: 0
+  m_Name: SkipScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1250286971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250286970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d7f91c5897a6c94c855d87d89b2a191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: 1
+--- !u!4 &1250286972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250286970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8503464, y: 7.2035675, z: 4.688142}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1269564345 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5396013533759867739, guid: fcd2c235b7f70244b9a5bc5318fbcb05,
@@ -34574,7 +34676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb636f43e9bf3014b83d13d89bb6685c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 5
+  delay: 7
   resetCoroutines: 1
   events:
     m_PersistentCalls:

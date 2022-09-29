@@ -1091,6 +1091,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 1
+      - m_Target: {fileID: 1342947698}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
   backgroundSound: {fileID: 1219762226}
   sadMusic: {fileID: 1342947700}
   blueLightColor: {r: 0, g: 0.49722525, b: 0.7924528, a: 1}
@@ -4880,6 +4892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyDelay: 0.1
+  delayBeforeEvent: 0
   doneEvent:
     m_PersistentCalls:
       m_Calls:
@@ -4987,6 +5000,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 598140507}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &269459499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 269459501}
+  - component: {fileID: 269459500}
+  m_Layer: 0
+  m_Name: SkipScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &269459500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269459499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d7f91c5897a6c94c855d87d89b2a191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: 5
+--- !u!4 &269459501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269459499}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8503464, y: 7.2035675, z: 4.688142}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 47
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &275531756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8377,6 +8435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyDelay: 0.1
+  delayBeforeEvent: 3
   doneEvent:
     m_PersistentCalls:
       m_Calls:
@@ -8458,13 +8517,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'CHAPTER 4
 
-    CORPORATE DOG EAT DOG
+    CORPORATE DOG EAT DOG OFFICE
 
 
-    The long workday has been grueling.
+    The long workday has
+    been grueling.
 
-    You
-    receive an email from upper management...'
+    You receive an email from upper management...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee22f32fe95af5842b2f61b525215f53, type: 2}
   m_sharedMaterial: {fileID: -8427620232313982000, guid: ee22f32fe95af5842b2f61b525215f53,
@@ -19807,9 +19866,12 @@ PrefabInstance:
     - target: {fileID: 407298285106202086, guid: 1606f8d7914710e48ac97d86c12ec305,
         type: 3}
       propertyPath: pleadMessage
-      value: 'Resist! Are you going to be
+      value: 'Don''t fire anyone!
 
-        Barky''s lap dog forever?'
+        Are you going to be
+
+        Barky''s
+        lap dog forever?'
       objectReference: {fileID: 0}
     - target: {fileID: 407298285106202086, guid: 1606f8d7914710e48ac97d86c12ec305,
         type: 3}
@@ -21231,9 +21293,7 @@ PrefabInstance:
 
         But I''ll be back with
 
-        vengeance...
-
-'
+        vengeance...'
       objectReference: {fileID: 0}
     - target: {fileID: 407298285106202086, guid: 1606f8d7914710e48ac97d86c12ec305,
         type: 3}
@@ -29026,6 +29086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyDelay: 0.1
+  delayBeforeEvent: 0
   doneEvent:
     m_PersistentCalls:
       m_Calls:
@@ -44942,6 +45003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyDelay: 0.05
+  delayBeforeEvent: 0
   doneEvent:
     m_PersistentCalls:
       m_Calls:
@@ -48116,6 +48178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyDelay: 0.1
+  delayBeforeEvent: 0
   doneEvent:
     m_PersistentCalls:
       m_Calls:
@@ -55809,9 +55872,12 @@ PrefabInstance:
     - target: {fileID: 407298285106202086, guid: 1606f8d7914710e48ac97d86c12ec305,
         type: 3}
       propertyPath: pleadMessage
-      value: 'Please don''t fire me!
+      value: 'OK, you can fire me.
 
-        Please?'
+        But please don''t let them
+
+        grind
+        me into meat paste.'
       objectReference: {fileID: 0}
     - target: {fileID: 407298285106202086, guid: 1606f8d7914710e48ac97d86c12ec305,
         type: 3}
@@ -61022,7 +61088,7 @@ PrefabInstance:
       propertyPath: pleadMessage
       value: 'Please don''t fire me!
 
-        I have 5 pups!'
+        I''m your best friend here!'
       objectReference: {fileID: 0}
     - target: {fileID: 407298285106202086, guid: 1606f8d7914710e48ac97d86c12ec305,
         type: 3}

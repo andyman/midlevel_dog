@@ -14,6 +14,7 @@ public class TypewriteTextMeshProUGUI : MonoBehaviour
 	string story;
 	public float keyDelay = 0.05f;
 	private bool _done = false;
+	public float delayBeforeEvent = 0.0f;
 
 	public UnityEvent doneEvent;
 	public AudioSet keySounds;
@@ -35,7 +36,7 @@ public class TypewriteTextMeshProUGUI : MonoBehaviour
 
 	public void Update()
 	{
-		if (skippable && (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire1")))
+		if (skippable && (Input.GetButtonDown("Jump")))
 		{
 			_done = true;
 		}
@@ -79,11 +80,18 @@ public class TypewriteTextMeshProUGUI : MonoBehaviour
 
 		_done = true;
 		txt.text = story;
-		doneEvent.Invoke();
+		StartCoroutine(StartDoneEvent());
+
 		float endTime = Time.unscaledTime;
 
 		float duration = endTime - startTime;
 		//Debug.Log("Duration: " + duration);
+	}
+
+	IEnumerator StartDoneEvent()
+	{
+		yield return new WaitForSecondsRealtime(delayBeforeEvent);
+		doneEvent.Invoke();
 	}
 
 }

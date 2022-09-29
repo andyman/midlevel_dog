@@ -89,7 +89,7 @@ public class CommuteLevelController : MonoBehaviour
 		if (scents >= maxScents)
 		{
 			levelDone = true;
-
+			goodCommute = true;
 			// win
 			winEvent.Invoke();
 		}
@@ -106,7 +106,7 @@ public class CommuteLevelController : MonoBehaviour
 		if (health <= 0.0f)
 		{
 			levelDone = true;
-
+			goodCommute = false;
 			// die
 			loseEvent.Invoke();
 		}

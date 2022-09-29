@@ -13,7 +13,7 @@ public class OfficeSceneText : MonoBehaviour
 	void Start()
 	{
 		StringBuilder buf = new StringBuilder();
-		buf.Append("CHAPTER 4\nCORPORATE DOG EAT DOG\n\n");
+		buf.Append("CHAPTER 4\nCORPORATE DOG EAT DOG OFFICE\n\n");
 
 		bool rested = DreamLevelController.endResultRested;
 		bool goodCommute = CommuteLevelController.goodCommute;

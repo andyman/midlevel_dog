@@ -79,7 +79,7 @@ public class OfficeLevelController : MonoBehaviour
 
 		if (letterWritten)
 		{
-			buf.Append("<color=#ff0>Message sent.</color>\n\nWalk stylishly in slow motion to the exit\nbefore Canine Resources can find you\nfor an \"exit interview\".");
+			buf.Append("<color=#ff0>Message sent.</color>\n\nStylishly make your way to the exit.\nSavor this moment in slow motion.");
 		}
 		else if (firings < maxFirings)
 		{
